@@ -1,0 +1,53 @@
+@use "../global/" as global;
+
+.l-footer {
+  padding-top: 24px;
+  padding-bottom: 23px;
+}
+
+.l-footer__inner {
+  padding-inline: 50px;
+}
+
+.l-footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.l-footer__left {
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+
+.l-footer-copyright {
+  color: #888;
+  font-family: global.$ff-deco;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2.2px;
+}
+
+.l-footer__sns {
+    display: flex;
+    gap: 14px;
+}
+
+.l-footer__sns-link {
+}
+
+.l-footer__right {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.l-footer__list {
+}
+
+.l-footer__list-link {
+  font-family: Barlow;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}

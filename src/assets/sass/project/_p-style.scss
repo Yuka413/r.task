@@ -1,2 +1,28 @@
 @use "../global/" as global;
 
+.p-style {
+  padding-top: 116px;
+}
+
+.p-style__inner {
+  padding-inline: 26px;
+}
+
+.p-style__container {
+  position: relative;
+  padding-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.p-style__bg-line{
+    position: absolute;
+    top: 0;
+}
+
+.p-style__pagetop {
+  padding-top: 152px;
+  padding-bottom: 180px;
+  text-align: center;
+}
