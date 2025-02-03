@@ -1,0 +1,21 @@
+@use "../global/" as global;
+
+.c-menu {
+  font-family: global.$ff-deco;
+  color: global.$color-l;
+}
+
+.c-menu__number {
+  padding-top: 7px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 2.16;
+  letter-spacing: 1px;
+}
+
+.c-menu__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.16;
+  letter-spacing: 1.2px;
+}
