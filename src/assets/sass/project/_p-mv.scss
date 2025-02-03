@@ -1,0 +1,31 @@
+@use "../global/" as global;
+
+.p-mv {
+  position: relative;
+}
+
+.p-mv__inner {
+}
+
+.p-mv__image {
+}
+
+.p-mv__title {
+  top: 130px;
+  left: 99px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-mv__title-sub {
+}
+
+.p-mv__title-main {
+  padding-top: 24px;
+  img {
+    width: 410.036px;
+    height: 32.949px;
+    flex-shrink: 0;
+  }
+}
