@@ -1,0 +1,38 @@
+@use "../global/" as global;
+
+.c-product {
+  color: global.$color-l;
+}
+
+.c-product__name {
+  padding-top: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 1.1px;
+}
+
+.c-product__container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.c-product__price {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 1.1px;
+}
+
+.c-product__view {
+  text-decoration: underline;
+  text-decoration-color: global.$color-l;
+  text-underline-offset: 2px;
+  font-family: global.$ff-deco;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 1.1px;
+}

@@ -1,0 +1,17 @@
+@use "../global/" as global;
+
+.p-product {
+}
+
+.p-product__inner {
+  padding-inline: 20px;
+}
+
+.p-product__container {
+  padding-top: 56px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  max-width: 964px;
+  margin: 0 auto;
+}

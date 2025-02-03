@@ -1,0 +1,13 @@
+@use "../global/" as global;
+
+.c-title {
+  text-align: center;
+}
+
+.c-title__text {
+  font-family: global.$ff-deco;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 10.08px;
+}

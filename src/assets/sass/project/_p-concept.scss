@@ -1,1 +1,26 @@
 @use "../global/" as global;
+
+.p-concept {
+  padding-top: 113px;
+  padding-bottom: 110px;
+}
+
+.p-concept__inner {
+  padding-inline: 20px;
+  text-align: center;
+}
+
+.p-concept__catch {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+
+.p-concept__lead {
+  padding-top: 42px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1.3px;
+}
