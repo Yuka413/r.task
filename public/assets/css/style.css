@@ -292,7 +292,47 @@ body {
 	z-index: 50;
 }
 
-.c-style:hover .c-style__content-view {
+.c-style:hover .c-style__content-view::after {
+	animation: underline 1s ease both;
+}
+
+.c-style:hover:nth-of-type(1) .c-style__content-title {
+	opacity: 0.3;
+}
+
+.c-style:hover:nth-of-type(2) .c-style__content-title {
+	color: #f2d4ab;
+}
+
+.c-style:hover:nth-of-type(3) .c-style__content-title {
+	color: #8cb585;
+}
+
+.c-style:hover:nth-of-type(4) .c-style__content-title {
+	color: #d2d2d3;
+}
+
+.c-style:hover:nth-of-type(5) .c-style__content-title {
+	color: #68686e;
+}
+
+.c-style:hover:nth-of-type(6) .c-style__content-title {
+	color: #336e9f;
+}
+
+.c-style:hover:nth-of-type(7) .c-style__content-title {
+	color: #030c4b;
+}
+
+.c-style:hover:nth-of-type(8) .c-style__content-title {
+	color: #e38859;
+}
+
+.c-style:hover:nth-of-type(9) .c-style__content-title {
+	color: #b4a362;
+}
+
+.c-style:hover:nth-of-type(10) .c-style__content-title {
 	opacity: 0.7;
 }
 
@@ -360,6 +400,7 @@ body {
 	font-weight: 900;
 	letter-spacing: 8.5px;
 	padding-top: 26px;
+	transition: color 0.5s ease, opacity 0.5s ease;
 }
 
 .c-style__content-name {
@@ -393,7 +434,6 @@ body {
 	letter-spacing: 1.1px;
 	line-height: 21.6px;
 	position: relative;
-	transition: opacity 0.3s ease;
 }
 
 .c-style__content-view::after {
@@ -401,9 +441,8 @@ body {
 	bottom: 3px;
 	content: "";
 	height: 1px;
-	left: 50%;
+	left: 1px;
 	position: absolute;
-	transform: translateX(-50%);
 	width: 26px;
 }
 
@@ -546,5 +585,21 @@ body {
 
 .u-color__black {
 	background-color: #414141;
+}
+
+@keyframes underline {
+
+0% {
+	transform: scaleX(1);
+}
+
+50% {
+	transform: scaleX(0);
+}
+
+100% {
+	transform: scaleX(1);
+}
+
 }
 
