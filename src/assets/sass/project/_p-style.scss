@@ -2,6 +2,7 @@
 
 .p-style {
   padding-top: 116px;
+  overflow: hidden;
 }
 
 .p-style__inner {
@@ -16,13 +17,19 @@
   gap: 64px;
 }
 
-.p-style__bg-line{
-    position: absolute;
-    top: 0;
+.p-style__bg-line {
+  position: absolute;
+  top: 0;
+  right: -18px;
+  z-index: 1;
+  img {
+    width: 1647px;
+    height: 8298px;
+  }
 }
 
 .p-style__pagetop {
-  padding-top: 152px;
+  padding-top: 149px;
   padding-bottom: 180px;
   text-align: center;
 }

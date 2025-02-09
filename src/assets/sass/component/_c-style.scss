@@ -1,6 +1,13 @@
 @use "../global/" as global;
 
 .c-style {
+  position: relative;
+  z-index: 50;
+  &:hover {
+    .c-style__content-view {
+      opacity: 0.7;
+    }
+  }
 }
 
 .c-style__container {
@@ -59,6 +66,7 @@
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 1.87px;
+  text-transform: lowercase;
 }
 
 .c-style__content-title {
@@ -66,7 +74,7 @@
   font-family: global.$ff-deco;
   font-size: 22px;
   font-weight: 900;
-  letter-spacing: 8.8px;
+  letter-spacing: 8.5px;
 }
 
 .c-style__content-name {
@@ -75,7 +83,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 21.6px;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.3px;
 }
 
 .c-style__content-wrapper {
@@ -90,15 +98,25 @@
   font-weight: 400;
   line-height: 21.6px;
   letter-spacing: 1.1px;
+  transform: translate(1px, 2px);
 }
 
 .c-style__content-view {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: #151515;
   color: global.$color-l;
   font-size: 11px;
   font-weight: 400;
   line-height: 21.6px;
   letter-spacing: 1.1px;
+  transition: opacity 0.3s ease;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 26px;
+    background-color: #151515;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
