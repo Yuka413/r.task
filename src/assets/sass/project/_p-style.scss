@@ -32,4 +32,13 @@
   padding-top: 149px;
   padding-bottom: 180px;
   text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.p-style__pagetop-button {
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
 }

@@ -1,25 +1,26 @@
+// メニュー開く
+function openMenu() {
+  $(".l-header").addClass("is-active");
+  $(".l-header__bg-mask").addClass("is-active");
+}
+
+// メニュー閉じる
+function closeMenu() {
+  $(".l-header").removeClass("is-active");
+  $(".l-header__bg-mask").removeClass("is-active");
+}
+
 // メニュークリックで開閉
 $(document).ready(function () {
-  const headerNav = $(".l-header__nav");
-  const navHeight = headerNav.outerHeight();
-
   $("#js-header-button").on("click", function () {
     $(this).toggleClass("is-active");
     if ($("#js-header-button").hasClass("is-active")) {
-      $("#js-header-button").css("transform", "translateY(0)");
-      $(".l-header__container").removeClass("is-active");
+      closeMenu();
     } else {
-      $("#js-header-button").css({
-        transform: `translateY(${navHeight}px)`,
-        transition: "transform 0.3s ease",
-      });
-      $(".l-header__container").addClass("is-active");
+      openMenu();
     }
   });
 });
-
-
-
 
 // スムーススクロール
 $('a[href^="#"]').on("click", function (e) {
@@ -28,12 +29,19 @@ $('a[href^="#"]').on("click", function (e) {
   const paddingTop = 30;
   const target = jQuery("#" == id ? "html" : id);
   const position = jQuery(target).offset().top - paddingTop;
-  $("html, body").animate({
-    scrollTop: position,
-  },
-  speed,
-  "swing"
-);
-$("#js-header-button").css("transform", "translateY(0)");
-$(".l-header__container").removeClass("is-active");
+  $("html, body").animate(
+    {
+      scrollTop: position,
+    },
+    speed,
+    "swing"
+  );
+  closeMenu();
 });
+
+// 
+const pageTop = document.querySelector("#js-pagetop");
+pageTop.addEventListener("click", scroll_top);
+function scroll_top() {
+window.scroll({ top: 0, behavior: "smooth" });
+}
