@@ -39,9 +39,24 @@ $('a[href^="#"]').on("click", function (e) {
   closeMenu();
 });
 
-// 
+// ページトップへ戻る
 const pageTop = document.querySelector("#js-pagetop");
 pageTop.addEventListener("click", scroll_top);
 function scroll_top() {
 window.scroll({ top: 0, behavior: "smooth" });
 }
+
+// ふわっと表示
+const intersectionObserver = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-in-view");
+      observer.unobserve(entry.target);
+    } 
+  });
+});
+
+const inViewItems = document.querySelectorAll(".fade-in-up");
+inViewItems.forEach(function (inViewItem) {
+  intersectionObserver.observe(inViewItem);
+});

@@ -23,8 +23,9 @@
 .l-header__nav {
   background: var(--cover-white, #eaeaea);
   padding-top: 24px;
-  padding-inline: 24px;
-  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 20px;
+  padding-bottom: 26px;
 }
 
 .l-header__list {
@@ -114,6 +115,7 @@
   font-weight: 400;
   line-height: 29px;
   letter-spacing: 1.2px;
+  padding-left: 1px;
   color: #68686e;
 }
 

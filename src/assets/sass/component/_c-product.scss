@@ -1,7 +1,20 @@
 @use "../global/" as global;
 
 .c-product {
+  img{
+    transition: opacity 0.5s ease;
+  }
   color: global.$color-l;
+  &:hover {
+    .c-product__view {
+      &::after {
+        animation: underline 1s ease both;
+      }
+    }
+    img{
+      opacity: 0.7;
+    }
+  }
 }
 
 .c-product__name {
@@ -26,9 +39,6 @@
 }
 
 .c-product__view {
-  text-decoration: underline;
-  text-decoration-color: global.$color-l;
-  text-underline-offset: 2px;
   font-family: global.$ff-deco;
   font-size: 11px;
   font-style: normal;
@@ -36,4 +46,14 @@
   line-height: 21.6px;
   letter-spacing: 1.1px;
   transform: translate(2px, -2px);
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 2px;
+    left: 0;
+    height: 1px;
+    width: 23px;
+    background-color: #151515;
+  }
 }

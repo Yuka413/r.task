@@ -1,0 +1,25 @@
+@use "../global/" as global;
+
+.fade-in-up{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s, transform 1.2s;
+  
+    &.is-in-view{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes underline {
+    0% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(0);
+    }
+  
+    100% {
+      transform: scaleX(1);
+    }
+  }
