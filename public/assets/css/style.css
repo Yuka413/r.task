@@ -145,7 +145,15 @@ body {
 	transition: opacity 0.5s ease;
 }
 
+.l-header__item .c-menu__number {
+	transition: opacity 0.5s ease;
+}
+
 .l-header__item:hover img {
+	opacity: 0.7;
+}
+
+.l-header__item:hover .c-menu__number {
 	opacity: 0.7;
 }
 
@@ -306,18 +314,15 @@ body {
 
 .c-product {
 	color: #151515;
+	transition: opacity 0.5s ease;
 }
 
-.c-product img {
-	transition: opacity 0.5s ease;
+.c-product:hover {
+	opacity: 0.7;
 }
 
 .c-product:hover .c-product__view::after {
 	animation: underline 1s ease both;
-}
-
-.c-product:hover img {
-	opacity: 0.7;
 }
 
 .c-product__name {

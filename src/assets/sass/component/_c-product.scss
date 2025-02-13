@@ -1,19 +1,16 @@
 @use "../global/" as global;
 
 .c-product {
-  img{
-    transition: opacity 0.5s ease;
-  }
   color: global.$color-l;
+  transition: opacity 0.5s ease;
   &:hover {
+    opacity: 0.7;
     .c-product__view {
       &::after {
         animation: underline 1s ease both;
       }
     }
-    img{
-      opacity: 0.7;
-    }
+
   }
 }
 
